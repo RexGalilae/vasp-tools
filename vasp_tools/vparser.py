@@ -1,7 +1,7 @@
 '''
 
 Now defunct! Functions have been reimplemented as POSCAR methods in vasp-objects.
-Can be used as helper functions but avoid using them
+Can be used as helper functions but avoid using them. Kept them for future reference.
 
 '''
 # from vobjects import POSCAR
