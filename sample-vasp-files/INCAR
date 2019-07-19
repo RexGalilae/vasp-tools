@@ -1,0 +1,31 @@
+# SCF input for VASP
+# Note that VASP uses the FIRST occurence of a keyword
+SYSTEM = Sr Ti O3  (Pm-3m) ~ C:/Users/Amar-Deep.Pathak/Desktop/Ethylene_Polymerization/Proton_Transfer_Project/SrTiO3/1512124.cif (VASP)
+    ncore = 24
+    PREC = Accurate
+   ENCUT = 500.000
+  IBRION = 2
+     NSW = 400
+    ISIF = 2
+  NELMIN = 2
+   EDIFF = 1.0e-05
+  EDIFFG = -0.02
+ VOSKOWN = 1
+  NBLOCK = 1
+  NWRITE = 1
+    NELM = 330
+    ALGO = N
+   ISPIN = 2
+  INIWAV = 1
+  ISTART = 0
+  ICHARG = 2
+   LWAVE = .FALSE.
+  LCHARG = .FALSE.
+ ADDGRID = .FALSE.
+LHYPERFINE = .FALSE.
+  ISMEAR = 0
+   SIGMA = 0.1
+   LREAL = .FALSE.
+#RWIGS = 1.91 1.45 0.73  0.32
+ IDIPOL = 3
+LDIPOL = .True.
