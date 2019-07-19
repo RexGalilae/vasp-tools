@@ -125,4 +125,6 @@ class vector(object):
                                [sn , cs, 0],
                                [0  ,  0, 1]]).astype(float)
             list = np.array(np.matmul(trans, self.to_list())).tolist()[0]
+
+        list = [round(num, 10) for num in list]
         return vector(*list)
