@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from vasp.objects import POSCAR
 import argparse
 import sys

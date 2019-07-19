@@ -21,11 +21,6 @@ args = parser.parse_args()
 file = args.file
 exp = args.exp
 
-'''
-file = "C:\\Users\\md_za\\Desktop\\Coding\\VASP-script-packaage\\POSCAR"
-exp = "Sr Ti/ O/ C H"
-'''
-
 groups = [group.split() for group in exp.split("/")]
 
 groups
