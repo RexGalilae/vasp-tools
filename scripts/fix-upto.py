@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from vasp.objects import POSCAR
+from vasp_tools.objects import POSCAR
 import argparse
 import sys
 

@@ -2,7 +2,8 @@ import numpy as np
 from numpy.linalg import inv
 import sys
 import copy
-from vector_algebra import *
+from vasp_tools.vector_algebra import *
+
 
 class POSCAR(object):
     """An object that encapsulates all the information contained within
@@ -167,9 +168,10 @@ class POSCAR(object):
         if self.type.lower() == "direct":
             return self
         else:
-            self.coords = [list(np.matmul(inv(self.trans), coord)) for coord in self.coords]
-            self.type = "Direct"
-            return self
+            cp = copy.deepcopy(self)
+            cp.coords = [list(np.matmul(inv(cp.trans), coord)) for coord in cp.coords]
+            cp.type = "Direct"
+            return cp
     def to_cart(self):
         """Converts POSCARs coordinate system to Cartesian.
 
@@ -183,9 +185,10 @@ class POSCAR(object):
         if self.type.lower() == "cartesian":
             return self
         else:
-            self.coords = [list(np.matmul(self.trans, coord)) for coord in self.coords]
-            self.type = "Cartesian"
-            return self
+            cp = copy.deepcopy(self)
+            cp.coords = [list(np.matmul(cp.trans, coord)) for coord in cp.coords]
+            cp.type = "Cartesian"
+            return cp
 
     def fix_upto(self, cutoff, direct = True):
         """Converts all atomic postions below the cutoff distance to "Fixed" state.
@@ -208,9 +211,8 @@ class POSCAR(object):
         if direct:
             co_vect = np.array([0.0, 0.0, cutoff])
             cutoff = np.dot(self.trans, co_vect).tolist()[0][2]
-        if (self.type.lower() == "direct"):
-            self.to_cart()
-        self.fix = [[True, True, True] if x[2] > cutoff*self.scale else [False, False, False] for x in self.coords]
+        temp = self.to_cart()
+        self.fix = [[True, True, True] if x[2] > cutoff*self.scale else [False, False, False] for x in temp.coords]
         self.selective = True
         return self
 
@@ -236,4 +238,3 @@ class POSCAR(object):
         ## Center the molecules fp at the origin
         centered_vects = [vect-fp for vect in vects]
         return centered_vects
-    

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import argparse
-from vasp.objects import POSCAR
+from vasp_tools.objects import POSCAR
 import sys
 
 parser = argparse.ArgumentParser(prog = "cart-direct",

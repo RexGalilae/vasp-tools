@@ -1,9 +1,9 @@
 #!/usr/bin/env python
-from vasp.objects import POSCAR
+from vasp_tools.objects import POSCAR
 import argparse
 import numpy as np
 import sys
-from vector_algebra import *
+from vasp_tools.vector_algebra import *
 
 parser = argparse.ArgumentParser(prog="rotate",
                                  description='''A script that rotates a molecule in a POSCAR file along a user-specified axis
