@@ -210,7 +210,10 @@ class POSCAR(object):
         """
         if direct:
             co_vect = np.array([0.0, 0.0, cutoff])
-            cutoff = np.dot(self.trans, co_vect).tolist()[0][2]
+            try:
+                cutoff = np.dot(self.trans, co_vect).tolist()[0][2]
+            except:
+                cutoff = np.dot(self.trans, co_vect).tolist()[2]
         temp = self.to_cart()
         self.fix = [[True, True, True] if x[2] > cutoff*self.scale else [False, False, False] for x in temp.coords]
         self.selective = True
