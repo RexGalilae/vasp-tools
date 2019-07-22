@@ -60,3 +60,9 @@ target/
 
 # pyenv python configuration file
 .python-version
+
+testbot/
+
+list/
+
+python/
