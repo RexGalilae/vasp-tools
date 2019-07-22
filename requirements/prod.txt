@@ -1,0 +1,15 @@
+pip
+punch.py
+wheel
+watchdog
+flake8
+Sphinx
+cryptography
+PyYAML
+numpy
+argparse
+sympy
+unittest2
+ujson
+jsonschema
+tabulate

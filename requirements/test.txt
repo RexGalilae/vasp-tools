@@ -1,5 +1,14 @@
--r prod.txt
-tox
-coverage
-pytest
-pytest-cov
+pip
+punch.py
+wheel
+watchdog
+flake8
+Sphinx
+cryptography
+PyYAML
+numpy
+argparse
+sympy
+unittest2
+ujson
+jsonschema
