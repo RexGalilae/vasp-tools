@@ -1,0 +1,12 @@
+#!/home/alhazen/Desktop/Coding/VASP-script-package/vasp-git/vasp_tools/python_env/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'vasp-tools','console_scripts','vasp_tools'
+__requires__ = 'vasp-tools'
+import re
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(
+        load_entry_point('vasp-tools', 'console_scripts', 'vasp_tools')()
+    )
