@@ -11,10 +11,12 @@ with open('HISTORY.rst') as history_file:
 
 requirements = [
     # TODO: put package requirements here
+    open("requirements.txt").read().split()
 ]
 
 test_requirements = [
     # TODO: put package test requirements here
+    open("requirements.txt").read().split()
 ]
 
 setup(
@@ -36,6 +38,7 @@ setup(
         'scripts/place-at.py',
         'scripts/rotate.py',
         'scripts/split-by.py',
+        'scripts/forces.py'
     ],
     package_dir={'vasp_tools':
                  'vasp_tools'},
