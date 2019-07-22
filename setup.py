@@ -11,12 +11,12 @@ with open('HISTORY.rst') as history_file:
 
 requirements = [
     # TODO: put package requirements here
-    open("/home/alhazen/Desktop/Coding/VASP-script-package/vasp-git/vasp_tools/requirements.txt").read().split()
+    open("requirements.txt").read().split()
 ]
 
 test_requirements = [
     # TODO: put package test requirements here
-    open("/home/alhazen/Desktop/Coding/VASP-script-package/vasp-git/vasp_tools/requirements.txt").read().split()
+    open("requirements.txt").read().split()
 ]
 
 setup(
