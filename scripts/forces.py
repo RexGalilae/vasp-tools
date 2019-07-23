@@ -63,14 +63,14 @@ with open(OUT) as f:
 #####################
 
 # Compute net positive and negative forces for x, y and z separately
-pos_fx=sum([f for f in fx if f < 0])
-neg_fx=sum([f for f in fx if f > 0])
+pos_fx=sum([f for f in fx if f > 0])
+neg_fx=sum([f for f in fx if f < 0])
 
-pos_fy=sum([f for f in fy if f < 0])
-neg_fy=sum([f for f in fy if f > 0])
+pos_fy=sum([f for f in fy if f > 0])
+neg_fy=sum([f for f in fy if f < 0])
 
-pos_fz=sum([f for f in fz if f < 0])
-neg_fz=sum([f for f in fz if f > 0])
+pos_fz=sum([f for f in fz if f > 0])
+neg_fz=sum([f for f in fz if f < 0])
 
 print(tabulate([
                 ['Fx', pos_fx, neg_fx],
