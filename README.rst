@@ -1,7 +1,7 @@
 VASP Tools
 ==========
 
-|Build Status| |Documentation Status|
+|Build Status| |Documentation Status| |Requirements Status|
 
 VASP Tools is a set of modules and scripts that automate routine tasks
 involving VASP files using a very intuitive CLI. The ``/scripts``
@@ -108,5 +108,5 @@ Written with `StackEdit <https://stackedit.io/>`__
    :target: https://travis-ci.com/RexGalilae/vasp-tools
 .. |Documentation Status| image:: https://readthedocs.org/projects/vasp-tools/badge/?version=latest
    :target: https://vasp-tools.readthedocs.io/en/latest/?badge=latest
-.. |Build Status| image:: https://pyup.io/repos/github/RexGalilae/vasp-tools/shield.svg?t=1563870347975
+.. |Requirements Status| image:: https://pyup.io/repos/github/RexGalilae/vasp-tools/shield.svg?t=1563870347975
    :target: https://pyup.io/account/repos/github/RexGalilae/vasp-tools/
