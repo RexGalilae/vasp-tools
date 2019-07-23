@@ -4,7 +4,7 @@
 VASP Tools is a set of modules and scripts that automate routine tasks involving VASP files using  a very intuitive CLI. The `/scripts` directory contains the scripts that implement the `/vasp` module to perform routine tasks on VASP files. This project is still a WIP and new scripts/modules will be added regularly over the next few weeks.
 
 ## Requirements
-As of now, this package is only supported on `Python>=3.5`. Since support for `Python 2.7` is set to be pulled by 2020, updates in the near future extending support to `Python<=3.0` seems unlikely.
+As of now, this package is only supported on `Python>=3.5`. Since support for `Python 2.7` will be officially redacted by [2020](https://pythonclock.org/), updates in the near future extending support to `Python<=3.0` seem unlikely.
 
 The following libraries are required to run all the scripts and modules.
  - [numpy](https://pypi.org/project/numpy/)
@@ -12,9 +12,10 @@ The following libraries are required to run all the scripts and modules.
  - [sympy](https://pypi.org/project/sympy/)
  - [ujson](https://pypi.org/project/ujson/)
  - [jsonschema](https://pypi.org/project/jsonschema/)
- - [tabulate](https://pypi.org/project/tabulate/)
+ - [tabulate](https://pypi.org/project/tabulate/),
+ - etc.
 
-For a full list of requirements, read requirements.txt. If not already present within the environment, they'll be installed as dependencies during setup.
+For a full list of requirements, read requirements.txt. If not already present within your working environment, they'll be automatically installed as dependencies during setup.
 
 ## Installation
 The installation process is quite simple, ensure you have a working version of `Python>=3.5` installed and type the following into the console,
