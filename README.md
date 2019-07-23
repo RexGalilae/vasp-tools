@@ -40,17 +40,17 @@ The code present in `/vasp` can be imported in the form of standard modules. How
 can be implemented in a single line like so.
 
 ```
-cat POSCAR1 | ./rotate.py -x 90 -y 10 | ./place-at.py "POSCAR2" 0.5 0.5 2.0 | ./fix-upto.py 10.0 | ./cart-direct > POSCARnew
+cat POSCAR1 | rotate.py -x 90 -y 10 | place-at.py "POSCAR2" 0.5 0.5 2.0 | fix-upto.py 10.0 | cart-direct.py > POSCARnew
 ```
 Alternatively, you can also call each script individually or pass "POSCAR1" as one of the positional arguments. For example,
 
-`./place-at.py "POSCAR2" "POSCAR1" 0.5 0.5 2.0`
+`place-at.py "POSCAR2" "POSCAR1" 0.5 0.5 2.0`
 
 is perfectly equivalent to
 
-`cat POSCAR1 | ./place-at.py "POSCAR2" 0.5 0.5 2.0`
+`cat POSCAR1 | place-at.py "POSCAR2" 0.5 0.5 2.0`
 
-Detailed instructions on how to use the scripts are available in [docs](https://vasp-tools.readthedocs.io/en/latest/).
+Detailed instructions on how to use the scripts are available in [docs](https://vasp-tools.readthedocs.io/en/latest/) (WIP).
 
 ----------------------------------------------------------
 *Written with [StackEdit](https://stackedit.io/)*
