@@ -8,9 +8,7 @@ parser = argparse.ArgumentParser(prog = "e-plot",
                                  description='''A script that plots the E-curve over multiple
                                                 iterations using data taken from a given OSZICAR
                                                 file.''',
-                                epilog=     '''In case you like/have something positive to say about this script, I'm
-                                               always available at WS-2016 but for any complaints/errors, please
-                                               contact the IT department.''')
+                                epilog= "Created by Zaid Hassan. Feel free to contact me @WS-2016 for any errors.")
 
 parser.add_argument('file', help="OSZICAR file")
 parser.add_argument('-d', '--diff',
@@ -24,8 +22,8 @@ args = parser.parse_args()
 file = args.file
 
 if args.save == ".unnamed":
-    save = os.path.dirname(os.path.abspath(__file__)).replace('\\','/').split('/')[-1]+"-e-plot"
-    print("Saving at {}".format(os.path.dirname(os.path.abspath(__file__))))
+    save = os.path.dirname(cwd.replace('\\','/').split('/')[-1]+"-dos-plot"
+    print("Saving at {}".format(cwd)
 else:
     save = args.save
 with open(file) as f:
