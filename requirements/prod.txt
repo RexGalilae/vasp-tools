@@ -1,4 +1,4 @@
-Cython==0.29.2
+Cython==0.29.13
 tabulate==0.8.3
 lxml==4.4.0
 mpmath==1.1.0
