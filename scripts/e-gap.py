@@ -8,7 +8,7 @@ import subprocess
 parser = argparse.ArgumentParser(prog="e-gap",
                                  description='''A script that prints out a list of Energy-gap values from a given
                                                 OUTCAR file for each k-point present in it.
-                                                
+
                                                 WARNING: Script assumes that the corresponding OSZICAR file is also
                                                 present in the same directory.''',
                                  epilog="Created by Zaid Hassan. Feel free to contact me @WS-2016 for any errors.")
@@ -37,6 +37,8 @@ with open(OUT) as f:
     # Loop over all k-points
     kinfo = []
     kline = f.readline().replace("\n","")
+    eli = []
+    eui = []
     while kline.split()[0] == "k-point":
         f.readline()
         # Loop within a k-point
@@ -51,6 +53,10 @@ with open(OUT) as f:
         md_index = diffs.index(max(diffs))
         e1 = table[md_index][1]
         e2 = table[md_index+1][1]
+
+        eli += [e1]
+        eui += [e2]
+
         kinfo.append(f"{kline} | Energy Gap: {abs(e1-e2):.4f} eV")
         kline = f.readline().replace("\n", "")
         if len(kline.split()) < 6:
@@ -58,3 +64,5 @@ with open(OUT) as f:
 
 for k in kinfo:
     print(k, end="\n--------------------------------------------------------------------------\n")
+
+print(f"Overall Energy Gap : {min(eui)-max(eli):.4f} eV")
