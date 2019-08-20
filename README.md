@@ -1,5 +1,7 @@
-﻿# VASP Tools
-[![Build Status](https://travis-ci.com/RexGalilae/vasp-tools.svg?branch=master)](https://travis-ci.com/RexGalilae/vasp-tools) [![Documentation Status](https://readthedocs.org/projects/vasp-tools/badge/?version=latest)](https://vasp-tools.readthedocs.io/en/latest/?badge=latest) [![Requirements Status](https://pyup.io/repos/github/RexGalilae/vasp-tools/shield.svg?t=1563870347975)](https://pyup.io/account/repos/github/RexGalilae/vasp-tools/)
+# VASP Tools
+﻿
+[![Build Status](https://travis-ci.com/RexGalilae/vasp-tools.svg?branch=master)] (https://travis-ci.com/RexGalilae/vasp-tools) [![Documentation Status](https://readthedocs.org/projects/vasp-tools/badge/?version=latest)] (https://vasp-tools.readthedocs.io/en/latest/?badge=latest) [![Requirements Status](https://pyup.io/repos/github/RexGalilae/vasp-tools/shield.svg?t=1563870347975)](https://pyup.io/account/repos/github/RexGalilae/vasp-tools/) [![Python 3](https://pyup.io/repos/github/RexGalilae/vasp-tools/python-3-shield.svg)](https://pyup.io/repos/github/RexGalilae/vasp-tools/)
+
 
 VASP Tools is a set of modules and scripts that automate routine tasks involving VASP files using  a very intuitive CLI. The `/scripts` directory contains the scripts that implement the `/vasp` module to perform routine tasks on VASP files. This project is still a WIP and new scripts/modules will be added regularly over the next few weeks.
 
@@ -17,15 +19,64 @@ The following libraries are required to run all the scripts and modules.
 For a full list of requirements, read requirements.txt. If not already present within the environment, they'll be installed as dependencies during setup.
 
 ## Installation
-The installation process is quite simple, ensure you have a working version of `Python>=3.5` installed and type the following into the console,
+The installation process is quite simple, just ensure you have a working version of `Python>=3.5` installed.
 
-    pip install vasp-tools
+**Note:** Since the package installs all its dependencies accurate to the exact versions used while developing it, it's highly recommended that you install it in a separate environment. 
+
+### To create a new environment 
+#### 1. Using Anaconda
+```
+conda create -n vasp_env python=3.x
+conda activate vasp_env
+``` 
+#### 2. Using `virtualenv` (for non-Anaconda users)
+
+In case you haven't already installed it, run `pip install virtualenv` in the terminal.
+
+Type the following into your terminal:
+```
+virtualenv vasp_env
+source vasp_env/bin/activate
+```
+### To install the package
+#### Stable Release
+
+To install `vasp_tools`, run this command in your terminal:
+```
+pip install vasp-tools
+```
+This is the preferred method to install `vasp_tools`, as it will always install the most recent stable release.
+  
+If you don't have [pip](https://pip.pypa.io) installed, this [Python installation guide](http://docs.python-guide.org/en/latest/starting/installation/) can guide you through the process.
+
+#### From Sources
+The sources for `vasp_tools` can be downloaded from the  [Github repo](https://github.com/RexGalilae/vasp_tools).
+
+You can either clone the public repository:
+```
+git clone git://github.com/RexGalilae/vasp_tools
+```
+
+Or download the  [tarball](https://github.com/RexGalilae/vasp_tools/tarball/master):
+```
+curl  -OL https://github.com/RexGalilae/vasp_tools/tarball/master
+```
+
+Once you have a copy of the source, you can install it with:
+```
+python setup.py install
+```
 
 Any required libraries that aren't installed in the current environment will be automatically installed.
-This will also automatically install the scripts and add them to $PATH for easy access.
+This will also automatically install the scripts and add them to `$PATH` for easy access.
 
+### Issues with Installation
+If nothing works, navigate to the package directory and activate the pre-packaged environment `python_env` by running,
+```
+source python_env/bin/activate
+```
 ## Compatibility
-The package, so far, was only tested within a Linux environment and isn't officially compatible with Windows yet. The scripts can be compiled into executables using [PyInstaller](https://pypi.org/project/PyInstaller/) to work independently of python on any system, though it should be run in an environment with an identical OS. Use of VMs/Containers is suggested, though not tested as of yet.
+The package, so far, was only tested within a Linux environment and isn't officially compatible with Windows yet. The scripts can be compiled into executables using [PyInstaller](https://pypi.org/project/PyInstaller/)+Python3.x to work independently of python on any other system running an identical OS. Hence, using VMs/Containers is suggested, though not tested as of yet.
 
 ## Usage
 The code present in `/vasp` can be imported in the form of standard modules. However, the primary purpose of this project was the creation of scripts (present in `/scripts`) to automate daily tasks faced by the Computational Chemist/Material Scientist. With this in mind, the scripts were designed to be extremely modular and user-friendly by implementing a [`dplyr`](https://style.tidyverse.org/pipes.html)-esque piping paradigm. For example, the process of:
