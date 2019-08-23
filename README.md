@@ -1,6 +1,5 @@
 # VASP Tools
-﻿
-[![Build Status](https://travis-ci.com/RexGalilae/vasp-tools.svg?branch=master)] (https://travis-ci.com/RexGalilae/vasp-tools) [![Documentation Status](https://readthedocs.org/projects/vasp-tools/badge/?version=latest)] (https://vasp-tools.readthedocs.io/en/latest/?badge=latest) [![Requirements Status](https://pyup.io/repos/github/RexGalilae/vasp-tools/shield.svg?t=1563870347975)](https://pyup.io/account/repos/github/RexGalilae/vasp-tools/) [![Python 3](https://pyup.io/repos/github/RexGalilae/vasp-tools/python-3-shield.svg)](https://pyup.io/repos/github/RexGalilae/vasp-tools/)
+[![Build Status](https://travis-ci.com/RexGalilae/vasp-tools.svg?branch=master)](https://travis-ci.com/RexGalilae/vasp-tools) [![Documentation Status](https://readthedocs.org/projects/vasp-tools/badge/?version=latest)](https://vasp-tools.readthedocs.io/en/latest/?badge=latest) [![Requirements Status](https://pyup.io/repos/github/RexGalilae/vasp-tools/shield.svg?t=1563870347975)](https://pyup.io/account/repos/github/RexGalilae/vasp-tools/) [![Python 3](https://pyup.io/repos/github/RexGalilae/vasp-tools/python-3-shield.svg)](https://pyup.io/repos/github/RexGalilae/vasp-tools/)
 
 
 VASP Tools is a set of modules and scripts that automate routine tasks involving VASP files using  a very intuitive CLI. The `/scripts` directory contains the scripts that implement the `/vasp` module to perform routine tasks on VASP files. This project is still a WIP and new scripts/modules will be added regularly over the next few weeks.
