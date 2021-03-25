@@ -28,7 +28,7 @@ requirements = [
     "simplejson==3.16.0",
     "usercustomize==1.0.0",
     "wincertstore==0.2",
-    "PyYAML==5.1.1"
+    "PyYAML==5.4"
 ]
 
 test_requirements = requirements
