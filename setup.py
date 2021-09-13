@@ -17,7 +17,7 @@ requirements = [
     "numpy==1.16.4",
     "matplotlib==3.0.2",
     "sympy==1.4",
-    "cryptography==2.7",
+    "cryptography==3.2",
     "seaborn==0.9.0",
     "pyOpenSSL==19.0.0",
     "brotli==1.0.7",
