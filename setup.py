@@ -12,7 +12,7 @@ with open('HISTORY.rst') as history_file:
 requirements = [
     "Cython==0.29.2",
     "tabulate==0.8.3",
-    "lxml==4.2.5",
+    "lxml==4.6.5",
     "mpmath==1.1.0",
     "numpy==1.16.4",
     "matplotlib==3.0.2",
