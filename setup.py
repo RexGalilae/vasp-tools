@@ -21,7 +21,7 @@ requirements = [
     "seaborn==0.9.0",
     "pyOpenSSL==19.0.0",
     "brotli==1.0.7",
-    "protobuf==3.9.0",
+    "protobuf==3.18.3",
     "ipaddr==2.2.0",
     "mock==3.0.5",
     "ordereddict==1.1",
